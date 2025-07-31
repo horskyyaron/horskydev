@@ -1,9 +1,11 @@
 #!/bin/bash
 
+# This will extend Omarchy, thus it doesn't override some dotfiles but
+# extends them.
+# e.g. adding "source some/file.sh" into another file.
+
 YARON_DEV_DOTFILES=~/personal/horskydev/install/config/dotfiles
 
-curl -sS https://starship.rs/install.sh | sh
-
 # bashrc
-# echo "source $YARON_DEV_DOTFILES/bash/.bashrc" >>$HOME/.bashrc
-source $HOME/.bashrc
+curl -sS https://starship.rs/install.sh | sh # better prompt
+echo "source $YARON_DEV_DOTFILES/bash/.bashrc" >>$HOME/.bashrc
