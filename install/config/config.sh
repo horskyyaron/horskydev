@@ -8,5 +8,5 @@ YARON_DEV_DOTFILES=~/.local/share/horskydev/install/config/dotfiles
 
 # bashrc
 echo "configuring bash"
-curl -sS https://starship.rs/install.sh | sh # better prompt
+STARSHIP_SKIP_CONFIRM=1 curl -sS https://starship.rs/install.sh | sh
 echo "source $YARON_DEV_DOTFILES/bash/.bashrc" >>$HOME/.bashrc
