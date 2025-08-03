@@ -4,7 +4,7 @@
 # extends them.
 # e.g. adding "source some/file.sh" into another file.
 
-YARON_DEV_DOTFILES=~/personal/horskydev/install/config/dotfiles
+YARON_DEV_DOTFILES=~/.local/share/horskydev/install/config/dotfiles
 
 # bashrc
 echo "configuring bash"
