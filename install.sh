@@ -1,6 +1,6 @@
 #!/bin/bash
 
-YARON_DEV_INSTALL=~/personal/horskydev/install
+YARON_DEV_INSTALL=~/.local/share/horskydev/install
 
 show_subtext() {
   echo "$1" | tte --frame-rate ${3:-640} ${2:-wipe}
@@ -14,10 +14,10 @@ show_logo() {
 }
 
 # Development tools
-# show_logo beams 240
-# show_subtext "Installing terminal tools [1/2]"
-# source $YARON_DEV_INSTALL/development/terminal.sh
-# source $YARON_DEV_INSTALL/development/nvim.sh
+show_logo beams 240
+show_subtext "Installing terminal tools [1/2]"
+source $YARON_DEV_INSTALL/development/terminal.sh
+source $YARON_DEV_INSTALL/development/nvim.sh
 
 # Configuration
 show_logo decrypt 920
