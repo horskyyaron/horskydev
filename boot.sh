@@ -18,7 +18,7 @@ echo -e "\n$ansi_art\n"
 
 echo -e "\nCloning Horskydev..."
 rm -rf ~/.local/share/horskydev/
-git clone  https://github.com/horskyyaron/horskydev ~/.local/share/horskydev >/dev/null
+git clone   git@github.com:horskyyaron/horskydev.git ~/.local/share/horskydev >/dev/null
 
 echo -e "\nInstallation starting..."
 source ~/.local/share/horskydev/install.sh
