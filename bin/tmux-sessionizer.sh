@@ -6,7 +6,7 @@ else
     if [[ "$(uname)" == "Linux" ]]; then
         selected=$((find ~/personal ~/ -mindepth 1 -maxdepth 1 -type d )| fzf)
     elif [[ "$(uname)" == "Darwin" ]]; then
-        selected=$((find ~/personal ~/ -mindepth 1 -maxdepth 1 -type d && find ~/projects ~/ -mindepth 1 -maxdepth 2 -type d && find ~/moveo -type d -mindepth 1 -maxdepth 2 && find ~/moveo/skills -type d -mindepth 1 -maxdepth 2)| fzf)
+	selected=$((find ~/personal ~/ -mindepth 1 -maxdepth 1 -type d && find ~/projects ~/ -mindepth 1 -maxdepth 2 -type d && find ~/moveo -type d -mindepth 1 -maxdepth 2 | fzf))
     else
         echo "Unsupported operating system"
     fi
