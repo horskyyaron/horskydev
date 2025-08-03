@@ -10,3 +10,4 @@ YARON_DEV_DOTFILES=~/.local/share/horskydev/install/config/dotfiles
 echo "configuring bash"
 STARSHIP_SKIP_CONFIRM=1 curl -sS https://starship.rs/install.sh | sh
 echo "source $YARON_DEV_DOTFILES/bash/.bashrc" >>$HOME/.bashrc
+cp $YARON_DEV_DOTFILES/tmux/.tmux.conf ~
