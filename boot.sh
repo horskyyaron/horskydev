@@ -16,8 +16,6 @@ ansi_art='
 clear
 echo -e "\n$ansi_art\n"
 
-sudo pacman -Sy --noconfirm --needed git
-
 echo -e "\nCloning Horskydev..."
 rm -rf ~/.local/share/horskydev/
 git clone  https://github.com/horskyyaron/horskydev ~/.local/share/horskydev >/dev/null

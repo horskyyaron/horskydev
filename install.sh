@@ -9,7 +9,7 @@ show_subtext() {
 
 show_logo() {
   clear
-  tte -i ./logo.txt --frame-rate ${2:-120} ${1:-expand}
+  tte -i $HOME/.local/share/horskydev/logo.txt --frame-rate ${2:-120} ${1:-expand}
   echo
 }
 
