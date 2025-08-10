@@ -4,7 +4,16 @@ if [[ $# -eq 1 ]]; then
     selected=$1
 else
     if [[ "$(uname)" == "Linux" ]]; then
-        selected=$((find ~/personal ~/ -mindepth 1 -maxdepth 1 -type d )| fzf)
+        # selected=$((find ~/personal ~/ -mindepth 1 -maxdepth 1 -type d )| fzf)
+
+
+		selected=$(
+			{
+				find ~/personal -mindepth 1 -maxdepth 1 -type d ! -name '.*'
+				find ~/projects -mindepth 1 -maxdepth 1 -type d ! -name '.*'
+				find ~/work -mindepth 1 -maxdepth 1 -type d ! -name '.*'
+			} | fzf
+		)
     elif [[ "$(uname)" == "Darwin" ]]; then
 	selected=$((find ~/personal ~/ -mindepth 1 -maxdepth 1 -type d && find ~/projects ~/ -mindepth 1 -maxdepth 2 -type d && find ~/moveo -type d -mindepth 1 -maxdepth 2 | fzf))
     else
