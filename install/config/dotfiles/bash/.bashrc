@@ -20,3 +20,4 @@ export PATH=$PATH:$HOME/.local/share/horskydev/bin
 
 # bash syntax
 bind '"\C-f":"tmux-sessionizer.sh\n"'
+bind '"\C-n":"nvim-sessionizer.sh\n"'
