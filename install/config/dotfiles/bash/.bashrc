@@ -9,9 +9,8 @@ eval "$(starship init bash)"
 # alias vim=NVIM_APPNAME=horskyvim nvim
 # alias nvim=NVIM_APPNAME=horskyvim nvim
 
-# alias vim='nvim'
+# use my own nvim config
 alias vim='NVIM_APPNAME=horskyvim nvim'
-
 
 export PATH=$PATH:$HOME/.local/share/horskydev/bin
 
