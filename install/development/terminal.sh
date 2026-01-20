@@ -35,6 +35,7 @@ optional_packages=(
   lazydocker
   lazygit
   gdu
+  gh
 )
 
 install_with_brew() {
