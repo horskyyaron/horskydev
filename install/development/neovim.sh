@@ -1,5 +1,10 @@
 #!/bin/bash
 
+
+echo "removing old neovim directories"
+rm -rf $HOME/.local/share/nvim/
+rm -rf $HOME/.cache/nvim/
+
 echo "installing neovim from source"
 
 os=$(uname)
@@ -71,4 +76,4 @@ if ! cd "$neovim_dir"; then
 fi
 
 make CMAKE_BUILD_TYPE=RelWithDebInfo
-sudo make install
+make install
