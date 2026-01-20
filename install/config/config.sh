@@ -12,6 +12,17 @@
 # echo "source ${HORSKYDEV_DOTFILES}/bash/.bashrc" >> "$HOME/.bashrc"
 # cp "${HORSKYDEV_DOTFILES}/tmux/.tmux.conf" "$HOME/"
 
+dotfiles_dir="$HOME/dotfiles"
+
+if [[ -d "$dotfiles_dir" ]]; then
+    timestamp=$(date +"%Y-%m-%d_%H%M%S")
+    backup_dir="$HOME/dotfiles_bak_${timestamp}"
+    echo "backing up existing dotfiles to ${backup_dir}"
+    mv "$dotfiles_dir" "$backup_dir"
+fi
+
 echo "cloning dotfiles..."
-curl -sS https://starship.rs/install.sh | sh
-git clone git@github.com:horskyyaron/awesome_dotfiles.git "$HOME/dotfiles"
+git clone git@github.com:horskyyaron/awesome_dotfiles.git "$dotfiles_dir"
+
+echo "stowing dotfiles"
+stow -d "$dotfiles_dir" -t "$HOME" --ignore='\.git' --ignore='^README' .
