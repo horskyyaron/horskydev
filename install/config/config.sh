@@ -24,5 +24,14 @@ fi
 echo "cloning dotfiles..."
 git clone git@github.com:horskyyaron/awesome_dotfiles.git "$dotfiles_dir"
 
+if ! cd "$dotfiles_dir"; then
+    echo "failed to enter dotfiles directory"
+    exit 1
+fi
+
 echo "stowing dotfiles"
-stow -d "$dotfiles_dir" -t "$HOME" --ignore='\.git' --ignore='^README' .
+for path in */; do
+    dir_name=${path%/}
+    echo "stowing ${dir_name}"
+    stow "$dir_name"
+done
