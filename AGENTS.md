@@ -8,6 +8,7 @@ Use the guidance below when editing or running tools.
 - `boot.sh` clones the repo and kicks off installation.
 - `install.sh` orchestrates the install steps and animations.
 - `install/development/terminal.sh` installs terminal packages.
+- `install/development/neovim.sh` builds Neovim from source.
 - `install/development/nvim.sh` clones the Neovim config.
 - `install/config/config.sh` wires dotfiles into the user's home.
 - `install/config/dotfiles/bash/.bashrc` holds bash aliases and PATH.
@@ -27,6 +28,7 @@ Use the guidance below when editing or running tools.
 - Bootstrap from a fresh machine: `./boot.sh`.
 - Run install from an existing clone: `./install.sh`.
 - Run just terminal tooling: `bash install/development/terminal.sh`.
+- Run just Neovim install: `bash install/development/neovim.sh`.
 - Run just Neovim config setup: `bash install/development/nvim.sh`.
 - Apply dotfiles only: `bash install/config/config.sh`.
 - tmux session switcher: `tmux-sessionizer.sh`.
@@ -132,7 +134,7 @@ Use the guidance below when editing or running tools.
 - Update `AGENTS.md` with new commands.
 
 ## When editing install steps
-- Keep the install order consistent: terminal tools, nvim, dotfiles.
+- Keep the install order consistent: terminal tools, neovim, nvim config, dotfiles.
 - Use `show_logo` and `show_subtext` to preserve UX.
 - Avoid changing remote URLs without user approval.
 - Keep `YARON_DEV_INSTALL` path accurate.

@@ -21,11 +21,14 @@ show_logo() {
 
 # Development tools
 show_logo beams 240
-show_subtext "Installing terminal tools [1/2]"
-source $HORSKYDEV_INSTALL_DIR/development/terminal.sh
-source $HORSKYDEV_INSTALL_DIR/development/nvim.sh
+show_subtext "Installing terminal tools [1/3]"
+source "$HORSKYDEV_INSTALL_DIR/development/terminal.sh"
+
+show_subtext "Installing Neovim [2/3]"
+source "$HORSKYDEV_INSTALL_DIR/development/neovim.sh"
+source "$HORSKYDEV_INSTALL_DIR/config/nvim.sh"
 
 # Configuration
 show_logo decrypt 920
-show_subtext "Configuring dotfiles [2/2]"
-source $HORSKYDEV_INSTALL_DIR/config/config.sh
+show_subtext "Configuring dotfiles [3/3]"
+source "$HORSKYDEV_INSTALL_DIR/config/config.sh"
