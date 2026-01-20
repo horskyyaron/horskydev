@@ -5,6 +5,7 @@ echo "installing terminal stuff"
 os=$(uname)
 
 core_packages=(
+  zsh
   tmux
   fzf
   stow
