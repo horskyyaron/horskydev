@@ -33,7 +33,7 @@ optional_packages=(
   mise
   docker
   lazydocker
-  lazyvim
+  lazygit
   gdu
 )
 
