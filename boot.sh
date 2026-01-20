@@ -13,12 +13,14 @@ ansi_art='
                             ███    ███                ▀                                                      
 '
 
+HORSKYDEV_DIR=~/.local/share/horskydev
+
 clear
 echo -e "\n$ansi_art\n"
 
 echo -e "\nCloning Horskydev..."
-rm -rf ~/.local/share/horskydev/
-git clone   git@github.com:horskyyaron/horskydev.git ~/.local/share/horskydev >/dev/null
+rm -rf "$HORSKYDEV_DIR"
+git clone git@github.com:horskyyaron/horskydev.git "$HORSKYDEV_DIR" >/dev/null
 
 echo -e "\nInstallation starting..."
-source ~/.local/share/horskydev/install.sh
+source "$HORSKYDEV_DIR/install.sh"
