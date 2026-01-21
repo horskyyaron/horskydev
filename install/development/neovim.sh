@@ -76,4 +76,4 @@ if ! cd "$neovim_dir"; then
 fi
 
 make CMAKE_BUILD_TYPE=RelWithDebInfo
-make install
+sudo make install

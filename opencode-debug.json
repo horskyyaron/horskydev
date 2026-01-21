@@ -24,3 +24,5 @@
 {"ts":1768950701636,"event":{"type":"session.idle","properties":{"sessionID":"ses_4229ba5daffe0zx6hTftqkt8Oa"}}}
 {"ts":1768952035459,"event":{"type":"session.idle","properties":{"sessionID":"ses_4223e22d3ffeMFKcoNqFcf4Q4P"}}}
 {"ts":1768952211756,"event":{"type":"session.idle","properties":{"sessionID":"ses_4223e22d3ffeMFKcoNqFcf4Q4P"}}}
+{"ts":1768954540138,"event":{"type":"session.idle","properties":{"sessionID":"ses_42217e7a7ffejAscTE4H7pavo8"}}}
+{"ts":1768954568981,"event":{"type":"session.idle","properties":{"sessionID":"ses_42217e7a7ffejAscTE4H7pavo8"}}}
