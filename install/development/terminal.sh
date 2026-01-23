@@ -37,6 +37,7 @@ optional_packages=(
   lazygit
   gdu
   gh
+  try
 )
 
 install_with_brew() {
@@ -63,8 +64,9 @@ if [[ "$os" == "Darwin" ]]; then
   install_with_brew "${core_packages[@]}" "${core_packages_macos[@]}"
 
   echo "installing optional tools"
-  install_with_brew "${optional_packages[@]}"
   brew install --cask docker
+  brew tap tobi/try https://github.com/tobi/try # registering try package
+  install_with_brew "${optional_packages[@]}"
 
 elif [[ "$os" == "Linux" ]]; then
   echo "installing core"
